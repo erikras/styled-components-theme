@@ -13,6 +13,10 @@ selectors for colors in your
 color manipulation, using the [`color`](https://github.com/qix-/color) library via calls on the
 selectors themselves.
 
+A **selector**, in this context, is defined as a function that looks like
+`(props) => props.theme.myColor` that the `styled-components` library [accepts as a template
+variable](https://github.com/styled-components/styled-components/blob/master/docs/theming.md#using-theming).
+
 ---
 
 ## Installation
