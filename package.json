@@ -1,0 +1,86 @@
+{
+  "name": "styled-components-theme",
+  "version": "0.0.2",
+  "description": "Defines themes via flexible color selectors for use with styled-components",
+  "main": "./lib/index.js",
+  "jsnext:main": "./es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erikras/styled-components-theme"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:lib": "babel src --out-dir lib",
+    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/styled-components-theme.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/styled-components-theme.min.js",
+    "clean": "rimraf dist lib",
+    "lint": "eslint src",
+    "prepublish": "npm run test && npm run lint && npm run clean && npm run build",
+    "test": "mocha --compilers js:babel-register --recursive --recursive \"src/**/__tests__/*\" --require src/__tests__/setup.js",
+    "test:watch": "npm test -- --watch",
+    "test:cov": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm test",
+    "test:codecov": "cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "styled-components",
+    "theme",
+    "theming",
+    "colors"
+  ],
+  "author": "Erik Rasmussen <rasmussenerik@gmail.com> (http://github.com/erikras)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikras/styled-components-theme/issues"
+  },
+  "homepage": "https://github.com/erikras/styled-components-theme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-istanbul": "^2.0.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-preset-es2015-no-commonjs": "0.0.2",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "codecov.io": "^0.1.6",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.10.1",
+    "eslint-config-rackt": "^1.1.1",
+    "expect": "^1.14.0",
+    "mocha": "^3.1.2",
+    "mocha-lcov-reporter": "^1.1.0",
+    "nyc": "^8.4.0",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "color": "^0.11.4",
+    "styled-components": "^1.0.11"
+  },
+  "files": [
+    "README.md",
+    "lib",
+    "es",
+    "dist"
+  ],
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "npmName": "styled-components-theme",
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ]
+}
