@@ -39,7 +39,7 @@ const colors = {
 export default colors
 ```
 
-#### 2) Apply your theme with `ThemeProvider`
+#### 2) Apply your theme with [`ThemeProvider`](https://github.com/styled-components/styled-components/blob/master/docs/theming.md)
 
 ```jsx
 import { ThemeProvider } from 'styled-components';
