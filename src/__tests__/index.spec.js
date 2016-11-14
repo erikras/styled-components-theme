@@ -2,9 +2,6 @@ import expect from 'expect'
 import Color from 'color'
 import makeTheme from '../index'
 
-const testHasAllMethods = selector =>
-  colorMethods.forEach(method => expect(selector[ method ]).toBeA('function'))
-
 describe('makeTheme', () => {
   it('adds takes a theme of colors and generates selectors', () => {
     const colors = {

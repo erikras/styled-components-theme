@@ -4,5 +4,6 @@ coverage
 dist
 es
 lib
+.nyc_output
 npm-debug.log
 .DS_Store
