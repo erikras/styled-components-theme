@@ -25,7 +25,7 @@ Using [npm](https://www.npmjs.org/):
 
 ## Usage
 
-### 1) Define your theme colors
+#### 1) Define your theme colors
 
 ```jsx
 // colors.js
@@ -39,7 +39,7 @@ const colors = {
 export default colors
 ```
 
-### 2) Apply your theme with `ThemeProvider`
+#### 2) Apply your theme with `ThemeProvider`
 
 ```jsx
 import { ThemeProvider } from 'styled-components';
@@ -52,7 +52,7 @@ const App = props =>
 
 ```
 
-### 3) Create an importable theme object using `styled-components-theme`
+#### 3) Create an importable theme object using `styled-components-theme`
 
 ```jsx
 // theme.js
@@ -64,7 +64,7 @@ const theme = createTheme(...Object.keys(colors))
 export default theme
 ```
 
-### 4) Use the theme colors in your components
+#### 4) Use the theme colors in your components
 
 ```jsx
 import styled from 'styled-components'
@@ -81,6 +81,8 @@ const Button = styled.div`
   padding: 10px;
 `
 ```
+
+---
 
 ## Available manipulation functions
 
