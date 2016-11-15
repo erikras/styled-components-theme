@@ -98,7 +98,7 @@ const Header = styled.div`
   color: ${theme.light};
 `
 
-const Button = styled.div`
+const Button = styled.button`
   background-image: linear-gradient(${theme.light}, ${theme.light.darken(0.3));
   color: ${theme.dark};
   padding: 10px;
