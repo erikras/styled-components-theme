@@ -19,12 +19,31 @@ variable](https://github.com/styled-components/styled-components/blob/master/doc
 
 ---
 
+## Why?
+
+`styled-components` is an awesome library, and their React context-based theming scheme is great, 
+but:
+
+1. Having `${(props) => props.theme.highlight}` functions all over your template literals to use 
+any of your theme colors is both hard to read and cumbersome to type.
+
+2. In migrating from SASS and CSS Modules, I missed the ability to `lighten()` or `darken()` or 
+`transparentize()` a theme color at will to make subtle gradients or overlays.
+
+---
+
 ## Installation
 
 Using [npm](https://www.npmjs.org/):
 
 ```bash
   $ npm install --save styled-components-theme
+```
+
+Using [yarn](https://yarnpkg.com/):
+
+```bash
+  $ yarn add styled-components-theme
 ```
 
 ## Usage
@@ -72,7 +91,7 @@ export default theme
 
 ```jsx
 import styled from 'styled-components'
-import theme from './theme'
+import theme from './theme' // from Step #3
 
 const Header = styled.div`
   background: ${theme.dark};
