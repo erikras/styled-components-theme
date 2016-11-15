@@ -136,4 +136,4 @@ theme.color.rotate(-90)      // hsl(60, 20%, 20%) -> hsl(330, 20%, 20%)
 
 ---
 
-Made with ❤️  in 🇪🇸.by [@erikras](https://twitter.com/erikras).
+Made with ❤️ in 🇪🇸 by [@erikras](https://twitter.com/erikras).
