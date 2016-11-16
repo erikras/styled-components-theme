@@ -25,10 +25,10 @@ variable](https://github.com/styled-components/styled-components/blob/master/doc
 but:
 
 1. Having `${(props) => props.theme.highlight}` functions all over your template literals to use 
-any of your theme colors is both hard to read and cumbersome to type.
+   any of your theme colors is both hard to read and cumbersome to type.
 
 2. In migrating from SASS and CSS Modules, I missed the ability to `lighten()` or `darken()` or 
-`transparentize()` a theme color at will to make subtle gradients or overlays.
+   `transparentize()` a theme color at will to make subtle gradients or overlays.
 
 ---
 
@@ -136,4 +136,22 @@ theme.color.rotate(-90)      // hsl(60, 20%, 20%) -> hsl(330, 20%, 20%)
 
 ---
 
-Made with ❤️  in 🇪🇸.by [@erikras](https://twitter.com/erikras).
+## FAQ
+
+### Why use `color`? Why not [other color manipulation library]?
+
+Because `color`'s manipulation methods were so influenced by SASS, LESS and
+Stylus, they are already familiar to CSS coders.
+
+### Isn't `Color` mutable? Don't I need to `clone()`?
+
+Yes, `Color` is mutable, but this library handles the cloning for you, so
+you can chain the manipulation methods together to your heart's content
+without mutating the original theme color. e.g.
+`theme.primary.saturate(0.3).lighten(0.2).clearer(0.4)`.
+
+**The manipulation methods in `styled-components-theme` are *immutable***.
+
+---
+
+Made by  [@erikras](https://twitter.com/erikras) in 🇪🇸 with ❤️.
