@@ -154,4 +154,4 @@ without mutating the original theme color. e.g.
 
 ---
 
-Made by  [@erikras](https://twitter.com/erikras) in 🇪🇸 with ❤️.
+Made with ❤️ in 🇪🇸 by [@erikras](https://twitter.com/erikras).
