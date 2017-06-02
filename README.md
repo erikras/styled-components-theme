@@ -6,6 +6,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/styled-components-theme.svg?style=flat-square)](https://www.npmjs.com/package/styled-components-theme)
 [![Build Status](https://img.shields.io/travis/erikras/styled-components-theme/master.svg?style=flat-square)](https://travis-ci.org/erikras/styled-components-theme)
 [![codecov.io](https://codecov.io/github/erikras/styled-components-theme/coverage.svg?branch=master)](https://codecov.io/github/erikras/styled-components-theme?branch=master)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [`styled-components-theme`](https://github.com/erikras/styled-components-theme) generates 
 selectors for colors in your

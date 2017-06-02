@@ -8,7 +8,8 @@ import addModifier from './addModifier'
 const decorateSelector = selector => {
   // add member functions to our selector
   colorMethods.forEach(method => {
-    selector[method] = (...args) => decorateSelector(addModifier(selector, method, ...args))
+    selector[method] = (...args) =>
+      decorateSelector(addModifier(selector, method, ...args))
   })
   return selector
 }
