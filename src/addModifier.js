@@ -5,7 +5,7 @@ import Color from 'color'
  * original function to get the color and then modifies that color, ultimately returning another
  * color string.
  */
-const addModifier = (fn, method, ...modifierArgs) =>
-  (...args) => new Color(fn(...args))[ method ](...modifierArgs).hex()
+const addModifier = (fn, method, ...modifierArgs) => (...args) =>
+  new Color(fn(...args))[method](...modifierArgs).hex()
 
 export default addModifier

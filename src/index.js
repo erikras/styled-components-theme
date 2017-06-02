@@ -6,8 +6,6 @@ const makeTheme = (...colors) =>
     return result
   }, {})
 
-export {
-  makeThemeColor
-}
+export { makeThemeColor }
 
 export default makeTheme
