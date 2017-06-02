@@ -9,7 +9,7 @@ const testHasAllMethods = selector =>
 describe('decorateSelector', () => {
   colorMethods.forEach(method => {
     it(`adds ${method} method`, () => {
-      const selector = () => new Color('#2A2A2A').rgbString()
+      const selector = () => new Color('#2A2A2A').hex()
       decorateSelector(selector)
       expect(selector).toBeA('function')
       expect(selector[method]).toBeA('function')
