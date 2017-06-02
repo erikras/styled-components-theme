@@ -2,12 +2,12 @@ import expect from 'expect'
 import Color from 'color'
 import addModifer from '../addModifier'
 
-const selector = () => new Color('#2A2A2A').rgbString()
+const selector = () => new Color('#2A2A2A').hex()
 
 const testModifier = (modifier, ...args) => {
   const modified = addModifer(selector, modifier, ...args)
   expect(modified).toBeA('function')
-  expect(modified()).toEqual(new Color(selector())[modifier](...args).rgbString())
+  expect(modified()).toEqual(new Color(selector())[modifier](...args).hex())
 }
 
 describe('addModifier', () => {

@@ -31,7 +31,7 @@ describe('makeTheme', () => {
     const lighterGray = graySelector.lighten(0.4)
     const darkerRed = redSelector.darken(0.1)
 
-    expect(lighterGray(themeFromProvider)).toBe(new Color(colors.gray).lighten(0.4).rgbString())
-    expect(darkerRed(themeFromProvider)).toBe(new Color(colors.red).darken(0.1).rgbString())
+    expect(lighterGray(themeFromProvider)).toBe(new Color(colors.gray).lighten(0.4).hex())
+    expect(darkerRed(themeFromProvider)).toBe(new Color(colors.red).darken(0.1).hex())
   })
 })
