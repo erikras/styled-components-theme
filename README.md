@@ -128,7 +128,7 @@ theme.color.greyscale()      // #5CBF54 -> #969696
 theme.color.whiten(0.5)      // hwb(100, 50%, 50%) -> hwb(100, 75%, 50%)
 theme.color.blacken(0.5)     // hwb(100, 50%, 50%) -> hwb(100, 50%, 75%)
 
-theme.color.clearer(0.5)     // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 0.4)
+theme.color.fade(0.5)        // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 0.4)
 theme.color.opaquer(0.5)     // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 1.0)
 
 theme.color.rotate(180)      // hsl(60, 20%, 20%) -> hsl(240, 20%, 20%)
@@ -149,7 +149,7 @@ Stylus, they are already familiar to CSS coders.
 Yes, `Color` is mutable, but this library handles the cloning for you, so
 you can chain the manipulation methods together to your heart's content
 without mutating the original theme color. e.g.
-`theme.primary.saturate(0.3).lighten(0.2).clearer(0.4)`.
+`theme.primary.saturate(0.3).lighten(0.2).fade(0.4)`.
 
 **The manipulation methods in `styled-components-theme` are *immutable***.
 

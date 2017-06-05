@@ -1,6 +1,7 @@
 import expect from 'expect'
 import Color from 'color'
 import addModifer from '../addModifier'
+import methods from '../colorMethods'
 
 const selector = () => new Color('#2A2A2A').hex()
 
@@ -11,12 +12,11 @@ const testModifier = (modifier, ...args) => {
 }
 
 describe('addModifier', () => {
-  it('adds a modifier function', () => {
-    testModifier('lighten', 0.1)
-    testModifier('lighten', 0.5)
-    testModifier('lighten', 0.9)
-    testModifier('darken', 0.1)
-    testModifier('darken', 0.5)
-    testModifier('darken', 0.9)
+  methods.forEach(method => {
+    it(`adds a ${method} modifier function`, () => {
+      testModifier(method, 0.1)
+      testModifier(method, 0.5)
+      testModifier(method, 0.9)
+    })
   })
 })
