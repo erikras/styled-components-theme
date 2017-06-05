@@ -6,12 +6,12 @@ const colorMethods = [
 
   'saturate', // hsl(100, 50%, 50%) -> hsl(100, 75%, 50%)
   'desaturate', // hsl(100, 50%, 50%) -> hsl(100, 25%, 50%)
-  'greyscale', // #5CBF54 -> #969696
+  'grayscale', // #5CBF54 -> #969696
 
   'whiten', // hwb(100, 50%, 50%) -> hwb(100, 75%, 50%)
   'blacken', // hwb(100, 50%, 50%) -> hwb(100, 50%, 75%)
 
-  'clearer', // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 0.4)
+  'fade', // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 0.4)
   'opaquer', // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 1.0)
 
   'rotate' // hsl(60, 20%, 20%) -> hsl(330, 20%, 20%)
