@@ -32,10 +32,10 @@ describe('makeTheme', () => {
     const darkerRed = redSelector.darken(0.1)
 
     expect(lighterGray(themeFromProvider)).toBe(
-      new Color(colors.gray).lighten(0.4).hex()
+      new Color(colors.gray).lighten(0.4).toString()
     )
     expect(darkerRed(themeFromProvider)).toBe(
-      new Color(colors.red).darken(0.1).hex()
+      new Color(colors.red).darken(0.1).toString()
     )
   })
 })

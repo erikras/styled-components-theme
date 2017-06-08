@@ -3,7 +3,7 @@ import addModifier from './addModifier'
 import aliases from './aliases'
 
 /**
- * Add useful methods directly to selector function, as well as put an hex() call at the end
+ * Add useful methods directly to selector function, as well as put an toString() call at the end
  * @param selector
  */
 const decorateSelector = selector => {

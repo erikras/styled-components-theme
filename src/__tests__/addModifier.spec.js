@@ -3,12 +3,14 @@ import Color from 'color'
 import addModifer from '../addModifier'
 import methods from '../colorMethods'
 
-const selector = () => new Color('#2A2A2A').hex()
+const selector = () => new Color('#2A2A2A').toString()
 
 const testModifier = (modifier, ...args) => {
   const modified = addModifer(selector, modifier, ...args)
   expect(modified).toBeA('function')
-  expect(modified()).toEqual(new Color(selector())[modifier](...args).hex())
+  expect(modified()).toEqual(
+    new Color(selector())[modifier](...args).toString()
+  )
 }
 
 describe('addModifier', () => {
