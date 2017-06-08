@@ -6,6 +6,6 @@ import Color from 'color'
  * color string.
  */
 const addModifier = (fn, method, ...modifierArgs) => (...args) =>
-  new Color(fn(...args))[method](...modifierArgs).hex()
+  new Color(fn(...args))[method](...modifierArgs).toString()
 
 export default addModifier
