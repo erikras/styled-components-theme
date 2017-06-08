@@ -1,6 +1,6 @@
 {
   "name": "styled-components-theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Defines themes via flexible color selectors for use with styled-components",
   "main": "./lib/index.js",
   "jsnext:main": "./es/index.js",
