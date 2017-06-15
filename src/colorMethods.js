@@ -14,7 +14,9 @@ const colorMethods = [
   'fade', // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 0.4)
   'opaquer', // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 1.0)
 
-  'rotate' // hsl(60, 20%, 20%) -> hsl(330, 20%, 20%)
+  'rotate', // hsl(60, 20%, 20%) -> hsl(330, 20%, 20%)
+
+  'mix', // rgb(0, 0, 255) * 0.8 + rgb(0, 255, 0) * 0.2 -> rgb(0, 51, 204)
 ]
 
 export default colorMethods

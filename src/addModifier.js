@@ -5,7 +5,14 @@ import Color from 'color'
  * original function to get the color and then modifies that color, ultimately returning another
  * color string.
  */
-const addModifier = (fn, method, ...modifierArgs) => (...args) =>
-  new Color(fn(...args))[method](...modifierArgs).toString()
+const addModifier = (fn, method, ...modifierArgs) => (...args) => {
+  if (method === 'mix') {
+    // Mix takes another selector. To run the underlying Color method,
+    // convert the selector into a Color by evaluating it with the props.
+    modifierArgs = [].concat(modifierArgs)
+    modifierArgs[0] = new Color(modifierArgs[0](...args));
+  }
+  return new Color(fn(...args))[method](...modifierArgs).toString()
+}
 
 export default addModifier
