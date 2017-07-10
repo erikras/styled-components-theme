@@ -133,6 +133,8 @@ theme.color.opaquer(0.5)     // rgba(10, 10, 10, 0.8) -> rgba(10, 10, 10, 1.0)
 
 theme.color.rotate(180)      // hsl(60, 20%, 20%) -> hsl(240, 20%, 20%)
 theme.color.rotate(-90)      // hsl(60, 20%, 20%) -> hsl(330, 20%, 20%)
+
+theme.color.mix(theme.otherColor, 0.2) // rgb(0, 0, 255) * 0.8 + rgb(0, 255, 0) * 0.2 -> rgb(0, 51, 204)
 ```
 
 ---

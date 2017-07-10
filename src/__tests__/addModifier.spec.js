@@ -14,7 +14,15 @@ const testModifier = (modifier, ...args) => {
 }
 
 describe('addModifier', () => {
-  methods.forEach(method => {
+  it(`adds a mix modifier function`, () => {
+    const otherSelector = () => new Color('#FF0000').toString()
+
+    const modified = addModifer(selector, 'mix', otherSelector, 0.5)
+    expect(modified).toBeA('function')
+    expect(modified()).toEqual(new Color(selector()).mix(new Color(otherSelector()), 0.5))
+  })
+
+  methods.filter(m => m !== 'mix').forEach(method => {
     it(`adds a ${method} modifier function`, () => {
       testModifier(method, 0.1)
       testModifier(method, 0.5)
