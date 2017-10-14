@@ -20,6 +20,10 @@ variable](https://github.com/styled-components/styled-components/blob/master/doc
 
 ---
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/P3WjkUw9LiYdiQBdHrtHZSSL/erikras/styled-components-theme'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/P3WjkUw9LiYdiQBdHrtHZSSL/erikras/styled-components-theme.svg' />
+</a>
+
 ## Why?
 
 `styled-components` is an awesome library, and their React context-based theming scheme is great, 
