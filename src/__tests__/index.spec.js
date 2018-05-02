@@ -38,4 +38,51 @@ describe('makeTheme', () => {
       new Color(colors.red).darken(0.1).toString()
     )
   })
+  
+  it('extracts theme structure', () => {
+    const exampleTheme = {
+      background: 'white',
+      color: 'red',
+      ui: {
+        background: 'gray',
+        color: 'red'
+      }
+    }
+
+    const theme = makeTheme(exampleTheme)
+ 
+    const colorSelector = theme.color
+    expect(colorSelector).toBeA('function')
+    expect(colorSelector.length).toBe(1)
+  
+   const uiColorSelector = theme.ui.color
+   expect(uiColorSelector).toBeA('function')
+   expect(uiColorSelector.length).toBe(1)
+      
+   const themeFromProvider = {
+     theme: {
+       background: '#FFFFFF',
+       color: '#2A2A2A',
+       ui: {
+         background: '#000000',
+         color: '#9B1919'
+       }
+     }
+   }
+   
+   expect(colorSelector(themeFromProvider))
+       .toBe(themeFromProvider.theme.color)
+   expect(uiColorSelector(themeFromProvider))
+       .toBe(themeFromProvider.theme.ui.color)
+
+   const darkerColor = colorSelector.darken(0.1)
+   const lighterUIColor = uiColorSelector.lighten(0.4)
+
+   expect(darkerColor(themeFromProvider)).toBe(
+     new Color(themeFromProvider.theme.color).darken(0.1).toString()
+   )
+   expect(lighterUIColor(themeFromProvider)).toBe(
+     new Color(themeFromProvider.theme.ui.color).lighten(0.4).toString()
+   )
+  })
 })
